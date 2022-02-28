@@ -1,12 +1,11 @@
 import gitlab
+import urllib3
 
 from st2common.runners.base_action import Action
 
+urllib3.disable_warnings()
+
 class GitlabBaseAction(Action):
-
-    def run(self, **kwargs):
-        pass
-
     def __init__(self, config):
         super(GitlabBaseAction, self).__init__(config)
         self.gitlab = self._get_client()

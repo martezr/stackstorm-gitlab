@@ -3,5 +3,5 @@ from lib import action
 
 class GitlabProject(action.GitlabBaseAction):
     def run(self, project):
-        #return self.projects.get(project)
-        return self
+        project_payload = self.gitlab.projects.get(project)
+        return project_payload.attributes
