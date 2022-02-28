@@ -1,3 +1,7 @@
+## v2.0.0
+
+* Migrate the pack to use the python-gitlab library
+
 ## v1.0.1
 
 * Small bug fixes regarding Python 3 support
