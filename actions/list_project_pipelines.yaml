@@ -1,0 +1,11 @@
+---
+name: list_project_pipelines
+description: "List project pipelines"
+runner_type: python-script
+entry_point: list_project_pipelines.py
+parameters:
+  project:
+    type: string
+    description: "The name of the project to fetch"
+    required: true
+    position: 0
