@@ -4,9 +4,6 @@ description: "Get issue metadata"
 runner_type: python-script
 entry_point: get_project_issue.py
 parameters:
-  url:
-    type: string
-    description: Override the configured base url for gitlab
   project:
     type: string
     required: true
@@ -15,9 +12,3 @@ parameters:
     type: string
     required: true
     description: The iid of the issue in the project (not global unique id) of the issue
-  token:
-    type: string
-    description: Override the configured token for the gitlab api
-  verify_ssl:
-    type: boolean
-    default: False
