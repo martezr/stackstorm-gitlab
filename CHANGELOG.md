@@ -2,6 +2,14 @@
 
 * Migrate the pack to use the python-gitlab library
 
+| Previous Action Name|New Action Name|
+|------------|-------------------|
+|`issue.info`|`get_project_issue`|
+|`pipeline.list`|`list_project_pipelines`|
+|`project.info`|`get_project`|
+|`pipeline.trigger`|`trigger_project_pipeline`|
+
+
 ## v1.0.1
 
 * Small bug fixes regarding Python 3 support

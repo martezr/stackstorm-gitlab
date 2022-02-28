@@ -1,12 +1,9 @@
 ---
-
 url:
   description: "Gitlab Url"
   type: string
-
 token:
   type: string
-
 verify_ssl:
   type: boolean
   default: False
