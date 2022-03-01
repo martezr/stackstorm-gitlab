@@ -1,6 +1,9 @@
 ## v2.0.0
 
 * Migrate the pack to use the python-gitlab library
+* Add support for multiple Gitlab instances similar to the vSphere StackStorm pack
+
+* The following actions have been renamed:
 
 | Previous Action Name|New Action Name|
 |------------|-------------------|

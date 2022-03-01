@@ -1,0 +1,18 @@
+from lib import action
+
+
+class TriggerProjectPipelineAction(action.GitlabBaseAction):
+    def get_or_create_trigger(project):
+        trigger_decription = 'my_trigger_id'
+        for t in project.triggers.list():
+            if t.description == trigger_decription:
+                return t
+        return project.triggers.create({'description': trigger_decription})
+
+    def run(self, project):
+        project_payload = self.gitlab.projects.get(project)
+
+
+
+        pipelines_payload = project_payload.pipelines.list()
+        return pipelines_payload
