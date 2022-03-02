@@ -51,5 +51,4 @@ class GitlabBaseAction(Action):
         except KeyError:
             verify_ssl = None
 
-        client = gitlab.Gitlab(url=url, private_token=token, ssl_verify=verify_ssl)
-        return client
+        self.gitlab = gitlab.Gitlab(url=url, private_token=token, ssl_verify=verify_ssl)
