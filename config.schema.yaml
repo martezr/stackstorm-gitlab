@@ -6,7 +6,6 @@ gitlab:
       "^\\w+":
         "$ref": "#/properties/credentials"
   additionalProperties: false
-
 credentials:
   type: "object"
   properties:
@@ -21,6 +20,6 @@ credentials:
       required: true
     verify_ssl:
       description: Port number for the WinRM connection (overrides global when using this credential).
-      type: "integer"
+      type: "boolean"
       required: false
   additionalProperties: false
