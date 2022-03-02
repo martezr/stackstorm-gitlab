@@ -2,7 +2,7 @@ from lib import action
 
 
 class GetProjectAction(action.GitlabBaseAction):
-    def run(self, project, credentials):
+    def run(self, project, credentials, url, token):
         self.get_client(credentials)
         project_payload = self.projects.get(project)
         return project_payload.attributes

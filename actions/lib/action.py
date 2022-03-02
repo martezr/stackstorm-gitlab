@@ -12,9 +12,9 @@ class GitlabBaseAction(Action):
         super(GitlabBaseAction, self).__init__(config)
         if config is None:
             raise ValueError("No connection configuration details found")
-        if "gitlab" in config:
-            if config['gitlab'] is None:
-                raise ValueError("'gitlab' config defined but empty.")
+        if "gitlabinstance" in config:
+            if config['gitlabinstance'] is None:
+                raise ValueError("'gitlabinstance' config defined but empty.")
             else:
                 pass
         else:
@@ -24,23 +24,23 @@ class GitlabBaseAction(Action):
         self.config = new_config
         self.gitlab = self._get_client()
 
-    def _get_connection_info(self, gitlab):
-        if gitlab:
-            connection = self.config['gitlab'].get(gitlab)
+    def _get_connection_info(self, gitlabinstance):
+        if gitlabinstance:
+            connection = self.config['gitlabinstance'].get(gitlabinstance)
         else:
-            connection = self.config['gitlab'].get('default')
+            connection = self.config['gitlabinstance'].get('default')
 
         for item in CONNECTION_ITEMS:
             if item in connection:
                 pass
             else:
-                raise KeyError("gitlab.yaml Mising: gitlab:%s:%s"
-                               % (gitlab, item))
+                raise KeyError("gitlab.yaml Mising: gitlabinstance:%s:%s"
+                               % (gitlabinstance, item))
 
         return connection
 
-    def get_client(self, gitlab):
-        connection = self._get_connection_info(gitlab)
+    def get_client(self, gitlabinstance):
+        connection = self._get_connection_info(gitlabinstance)
         url = connection['url']
         try:
             token = connection['token']

@@ -1,5 +1,5 @@
 ---
-gitlab:
+gitlabinstance:
   dev:
     url: username@dev.domain.tld
     token: xxx

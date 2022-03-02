@@ -1,5 +1,5 @@
 ---
-gitlab:
+gitlabinstance:
   type: "object"
   required: true
   patternProperties:
