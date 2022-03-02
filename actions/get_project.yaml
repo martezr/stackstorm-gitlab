@@ -9,3 +9,18 @@ parameters:
     description: "The name of the project to fetch"
     required: true
     position: 0
+  credentials:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 1
+  url:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 2
+  token:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 3

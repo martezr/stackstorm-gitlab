@@ -1,5 +1,10 @@
 ---
-url: http://gitlab.example.com
-token: Token
-verify_ssl: False
-
+gitlab:
+  dev:
+    url: username@dev.domain.tld
+    token: xxx
+    verify_ssl: false
+  prod:
+    url: username@test.domain.tld
+    token: xxx
+    verify_ssl: false
