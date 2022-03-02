@@ -1,25 +1,9 @@
 ---
-gitlab:
-  type: "object"
-  required: true
-  patternProperties:
-      "^\\w+":
-        "$ref": "#/properties/credentials"
-  additionalProperties: false
-credentials:
-  type: "object"
-  properties:
-    url:
-      description: "Username and domain for the WinRM connection (example: ad_user@domain.tld)."
-      type: "string"
-      required: true
-    token:
-      description: The password of the specified user.
-      type: "string"
-      secret: true
-      required: true
-    verify_ssl:
-      description: Port number for the WinRM connection (overrides global when using this credential).
-      type: "boolean"
-      required: false
-  additionalProperties: false
+url:
+  description: "Gitlab Url"
+  type: string
+token:
+  type: string
+verify_ssl:
+  type: boolean
+  default: False
