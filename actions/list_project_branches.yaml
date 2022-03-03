@@ -1,8 +1,8 @@
 ---
-name: get_project
-description: "Get project metadata"
+name: list_project_branches
+description: "List project branches"
 runner_type: python-script
-entry_point: get_project.py
+entry_point: list_project_branches.py
 parameters:
   project:
     type: string

@@ -1,0 +1,8 @@
+from lib import action
+
+
+class CreateProjectBranchAction(action.GitlabBaseAction):
+    def run(self, branch, credentials, url, token, verify_ssl):
+        self.get_client(credentials, url, token, verify_ssl)
+        msg = self.gitlab.broadcastmessages.create({'message': message})
+        return msg

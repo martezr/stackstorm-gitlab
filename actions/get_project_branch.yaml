@@ -1,31 +1,36 @@
 ---
-name: get_project
-description: "Get project metadata"
+name: list_project_branches
+description: "List project branches"
 runner_type: python-script
-entry_point: get_project.py
+entry_point: list_project_branches.py
 parameters:
   project:
     type: string
-    description: "The name of the project to fetch"
+    description: "The name of the project the branch lives in"
     required: true
     position: 0
+  branch:
+    type: string
+    description: "The name of the project branch to fetch"
+    required: true
+    position: 1
   credentials:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 1
+    position: 2
   url:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 2
+    position: 3
   token:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 3
+    position: 4
   verify_ssl:
     type: boolean
     description: "The name of the project to fetch"
     required: false
-    position: 3
+    position: 5

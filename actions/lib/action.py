@@ -20,10 +20,6 @@ class GitlabBaseAction(Action):
         else:
             raise ValueError("No connection configuration details found")
 
-    def config_override(self, new_config):
-        self.config = new_config
-        self.gitlab = self._get_client()
-
     def _get_connection_info(self, gitlabinstance):
         if gitlabinstance:
             connection = self.config['gitlabinstance'].get(gitlabinstance)
@@ -39,16 +35,19 @@ class GitlabBaseAction(Action):
 
         return connection
 
-    def get_client(self, gitlabinstance):
+    def get_client(self, gitlabinstance, url, token, verify_ssl):
         connection = self._get_connection_info(gitlabinstance)
-        url = connection['url']
-        try:
-            token = connection['token']
-        except KeyError:
-            token = None
-        try:
-            verify_ssl = connection['verify_ssl']
-        except KeyError:
-            verify_ssl = None
+        if url is None:
+            url = connection['url']
+        if token is None:
+            try:
+                token = connection['token']
+            except KeyError:
+                token = None
+        if verify_ssl is None:
+            try:
+                verify_ssl = connection['verify_ssl']
+            except KeyError:
+                verify_ssl = None
 
         self.gitlab = gitlab.Gitlab(url=url, private_token=token, ssl_verify=verify_ssl)
