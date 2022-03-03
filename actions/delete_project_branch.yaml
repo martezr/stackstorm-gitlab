@@ -1,0 +1,36 @@
+---
+name: delete_project_branch
+description: "Delete a project branch"
+runner_type: python-script
+entry_point: delete_project_branch.py
+parameters:
+  project:
+    type: string
+    description: "The name of the project the branch lives in"
+    required: true
+    position: 0
+  branch:
+    type: string
+    description: "The name of the project branch to fetch"
+    required: true
+    position: 1
+  credentials:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 2
+  url:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 3
+  token:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 4
+  verify_ssl:
+    type: boolean
+    description: "The name of the project to fetch"
+    required: false
+    position: 5

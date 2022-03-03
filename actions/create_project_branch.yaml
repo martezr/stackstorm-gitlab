@@ -1,0 +1,41 @@
+---
+name: create_project_branch
+description: "Create a project branch"
+runner_type: python-script
+entry_point: create_project_branch.py
+parameters:
+  project:
+    type: string
+    description: "The name of the project the branch lives in"
+    required: true
+    position: 0
+  branch:
+    type: string
+    description: "The name of the project branch to fetch"
+    required: true
+    position: 1
+  ref:
+    type: string
+    description: "The name of the project branch to fetch"
+    required: true
+    position: 2
+  credentials:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 3
+  url:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 4
+  token:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 5
+  verify_ssl:
+    type: boolean
+    description: "The name of the project to fetch"
+    required: false
+    position: 6
