@@ -36,10 +36,13 @@ class GitlabBaseAction(Action):
         return connection
 
     def get_client(self, gitlabinstance, url, token, verify_ssl):
-        if gitlabinstance is not None:
+        if url and token and verify_ssl:
+            url = url
+            token = token
+            verify_ssl = verify_ssl
+        elif gitlabinstance is not None:
             connection = self._get_connection_info(gitlabinstance)
             url = connection['url']
             token = connection['token']
             verify_ssl = connection['verify_ssl']
-
         self.gitlab = gitlab.Gitlab(url=url, private_token=token, ssl_verify=verify_ssl)
