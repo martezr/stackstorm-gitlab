@@ -1,8 +1,8 @@
 ---
-name: get_project_issue
+name: close_project_issue
 description: "Get issue metadata"
 runner_type: python-script
-entry_point: get_project_issue.py
+entry_point: close_project_issue.py
 parameters:
   project:
     type: string
