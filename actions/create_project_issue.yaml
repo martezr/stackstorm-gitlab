@@ -38,4 +38,5 @@ parameters:
     type: boolean
     description: "The name of the project to fetch"
     required: false
+    default: False
     position: 6
