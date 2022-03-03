@@ -9,23 +9,38 @@ parameters:
     description: "The name of the project the branch lives in"
     required: true
     position: 0
+  starts_at:
+    type: string
+    description: "The name of the project the branch lives in"
+    required: true
+    position: 1
+  ends_at:
+    type: string
+    description: "The name of the project the branch lives in"
+    required: true
+    position: 2
+  background_color:
+    type: string
+    description: "The name of the project the branch lives in"
+    required: true
+    position: 3
   credentials:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 1
+    position: 4
   url:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 2
+    position: 5
   token:
     type: string
     description: "The name of the project to fetch"
     required: false
-    position: 3
+    position: 6
   verify_ssl:
     type: boolean
     description: "The name of the project to fetch"
     required: false
-    position: 4
+    position: 7

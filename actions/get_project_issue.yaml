@@ -8,7 +8,29 @@ parameters:
     type: string
     required: true
     description: The 'path_with_namespace' for the project that the issue lives in (group/group/project)
+    position: 0
   issue_iid:
     type: string
     required: true
     description: The iid of the issue in the project (not global unique id) of the issue
+    position: 1
+  credentials:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 2
+  url:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 3
+  token:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 4
+  verify_ssl:
+    type: boolean
+    description: "The name of the project to fetch"
+    required: false
+    position: 5

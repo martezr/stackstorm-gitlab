@@ -1,8 +1,8 @@
 ---
-name: list_project_branches
-description: "List project branches"
+name: get_project_branch
+description: "Get a project branch"
 runner_type: python-script
-entry_point: list_project_branches.py
+entry_point: get_project_branch.py
 parameters:
   project:
     type: string
