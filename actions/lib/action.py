@@ -37,9 +37,7 @@ class GitlabBaseAction(Action):
 
     def get_client(self, gitlabinstance, url, token, verify_ssl):
         if url and token and verify_ssl:
-            url = url
-            token = token
-            verify_ssl = verify_ssl
+            pass
         elif gitlabinstance is not None:
             connection = self._get_connection_info(gitlabinstance)
             url = connection['url']
