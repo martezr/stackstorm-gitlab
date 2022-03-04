@@ -1,19 +1,47 @@
 ---
 name: trigger_project_pipeline
-description: "Trigger a pipeline"
+description: "Trigger a project pipeline"
 runner_type: python-script
 entry_point: trigger_project_pipeline.py
 parameters:
   project:
     type: string
+    description: ""
     required: true
+    position: 0
   ref:
     type: string
+    description: "The name of the git ref to build"
     required: true
+    position: 1
   trigger_token:
     type: string
     required: true
     description: "CI Trigger Token"
+    position: 2
   variables:
     type: object
     description: "Pass variables to pipeline"
+    required: false
+    position: 3
+  credentials:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 4
+  url:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 5
+  token:
+    type: string
+    description: "The name of the project to fetch"
+    required: false
+    position: 6
+  verify_ssl:
+    type: boolean
+    description: Whether to verify the SSL certificate when connection override details are defined
+    required: false
+    default: False
+    position: 7

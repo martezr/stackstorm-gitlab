@@ -1,6 +1,6 @@
 ---
 name: create_broadcast_message
-description: "Create broadcast message"
+description: "Create a broadcast message"
 runner_type: python-script
 entry_point: create_broadcast_message.py
 parameters:
@@ -26,7 +26,7 @@ parameters:
     position: 3
   credentials:
     type: string
-    description: "The name of the project to fetch"
+    description: "The name of the connection details in the pack config to use"
     required: false
     position: 4
   url:
@@ -41,7 +41,7 @@ parameters:
     position: 6
   verify_ssl:
     type: boolean
-    description: "The name of the project to fetch"
+    description: Whether to verify the SSL certificate when connection override details are defined
     required: false
     default: False
     position: 7

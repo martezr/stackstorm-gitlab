@@ -1,27 +1,27 @@
 ---
 name: close_project_issue
-description: "Get issue metadata"
+description: "Close a project issue"
 runner_type: python-script
 entry_point: close_project_issue.py
 parameters:
   project:
     type: string
-    required: true
     description: The 'path_with_namespace' for the project that the issue lives in (group/group/project)
+    required: true
     position: 0
   issue_iid:
     type: string
+    description: The iid of the issue in the project (not global unique id) to close
     required: true
-    description: The iid of the issue in the project (not global unique id) of the issue
     position: 1
   credentials:
     type: string
-    description: The name of the credentials to use for connecting to Gitlab
+    description: "The name of the connection details in the pack config to use"
     required: false
     position: 2
   url:
-    type: string
     description: The url of the Gitlab instance to override
+    type: string
     required: false
     position: 3
   token:
@@ -31,7 +31,7 @@ parameters:
     position: 4
   verify_ssl:
     type: boolean
-    description: 
+    description: Whether to verify the SSL certificate when connection override details are defined
     required: false
     default: False
     position: 5

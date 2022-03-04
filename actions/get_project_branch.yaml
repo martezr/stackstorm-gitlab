@@ -16,7 +16,7 @@ parameters:
     position: 1
   credentials:
     type: string
-    description: "The name of the project to fetch"
+    description: "The name of the connection details in the pack config to use"
     required: false
     position: 2
   url:
@@ -31,7 +31,7 @@ parameters:
     position: 4
   verify_ssl:
     type: boolean
-    description: "The name of the project to fetch"
+    description: Whether to verify the SSL certificate when connection override details are defined
     required: false
     default: False
     position: 5

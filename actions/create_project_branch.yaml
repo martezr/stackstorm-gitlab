@@ -6,7 +6,7 @@ entry_point: create_project_branch.py
 parameters:
   project:
     type: string
-    description: "The name of the project the branch lives in"
+    description: The 'path_with_namespace' for the project to create the branch in (group/group/project)
     required: true
     position: 0
   branch:
@@ -21,7 +21,7 @@ parameters:
     position: 2
   credentials:
     type: string
-    description: "The name of the project to fetch"
+    description: "The name of the connection details in the pack config to use"
     required: false
     position: 3
   url:
@@ -36,7 +36,7 @@ parameters:
     position: 5
   verify_ssl:
     type: boolean
-    description: "The name of the project to fetch"
+    description: Whether to verify the SSL certificate when connection override details are defined
     required: false
     default: False
     position: 6

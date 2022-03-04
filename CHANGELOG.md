@@ -2,12 +2,14 @@
 
 * Migrate the pack to use the python-gitlab library
 * Add support for multiple Gitlab instances similar to the vSphere StackStorm pack
-* Added `create_broadcast_message` action
-* Added `create_project_branch` action
-* Added `delete_project_branch` action
-* Added `get_project_branch` action
-* Added `list_project_branches` action
-* Added `list_project_commits` action
+* Added new action: `close_project_issue`
+* Added new action: `create_broadcast_message`
+* Added new action: `create_project_branch`
+* Added new action: `create_project_issue`
+* Added new action: `delete_project_branch`
+* Added new action: `get_project_branch`
+* Added new action: `list_project_branches`
+* Added new action: `list_project_commits`
 * The following actions have been renamed:
 
 | Previous Action Name|New Action Name|
@@ -16,9 +18,6 @@
 |`pipeline.list`|`list_project_pipelines`|
 |`project.info`|`get_project`|
 |`pipeline.trigger`|`trigger_project_pipeline`|
-
-
-
 
 ## v1.0.1
 
